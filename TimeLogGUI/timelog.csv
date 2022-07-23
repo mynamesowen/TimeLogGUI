@@ -1,4 +1,20 @@
 time_spent,affected_user,description,location
-t,a,d,l
-t,a,d,l
-10,Owen,help,Main
+10,Owen,did this thing,main
+30,Owen,description,Main
+30,Owen,description,MGH
+11,22,33,44
+11,22,33,44
+50,Steve,help steve,L5
+a,b,c,d
+e,f,g,h
+w,x,y,z
+30,Brian,Assisted with RSA,Volpe
+15,Dan,computer not working,Here
+60,aaa,sss,bbb
+15,Owen,Add python path,Main
+45,Bill,Coding,Home
+10,Me,helping,L4
+15,Test,This is going to be a super long description to see how the window reacts,Bottom
+1,2,3,4
+ab,cd,ef,gh
+q,w,e,r

@@ -2,11 +2,9 @@
 #  - App should have options for Time (minutes), name, description, jobsite/location.
 
 import tkinter as tk
-from tkinter import ttk
-from tkinter import messagebox
+from tkinter import ttk, messagebox
 import csv
 import os
-from turtle import st
 
 # App class
 class App(tk.Tk):
@@ -15,6 +13,7 @@ class App(tk.Tk):
     
         # background color of window
         self.BG_COLOR = "#949494"
+        self.file_path = './TimeLogGUI/timelog.csv'
 
         # Create window
         self.geometry("500x320")
@@ -77,12 +76,12 @@ class App(tk.Tk):
         submit_button = ttk.Button(
             self, 
             text='Submit',
-            command=lambda t=time_spent, u=affected_user, d=description, l=location: self.submit(t,u,d,l)) # submit_button
+            command=lambda t=time_spent_entry, u=affected_user_entry, d=description_entry, l=location_entry: self.submit(t,u,d,l)) # submit_button
         #submit_button.state(['disabled']) # button is disabled until all boxes have entries
         submit_button.grid(column=1, row=4, padx=5, pady=5)
 
         # view log button
-        view_log = ttk.Button(self, text='View Log', state='disable')
+        view_log = ttk.Button(self, text='View Log', state=lambda: 'disabled' if self.is_file_empty(self.file_path) else 'normal')
         view_log.grid(column=0, row=4, padx=5, pady=5)
     
     # process once the submit button is pressed
@@ -91,6 +90,10 @@ class App(tk.Tk):
         # verify all fields were entered
         if(time.get() and user.get() and des.get() and loc.get()):
             self.save_to_file([time.get(), user.get(), des.get(), loc.get()])
+
+            # clear entry fields after data is saved
+            self.clear_entries([time, user, des, loc])
+
         else:
             # if any field is blank present an error
             messagebox.showinfo(
@@ -98,25 +101,32 @@ class App(tk.Tk):
                 message='All fields must be entered before submitting'
             )
 
+    # clear the entry fields
+    def clear_entries(self, entries):
+        for i in entries:
+            i.delete(0, 'end')
+
+    # used to save text from entries to csv file
     def save_to_file(self, row):
         # checking if the file exists and is empty
-        if self.is_file_empty('./TimeLogGUI/timelog.csv'):
+        if self.is_file_empty(self.file_path):
             print('File does not exist, creating and writing headers...')
 
             # create header arrary
             headers = ['time_spent', 'affected_user', 'description', 'location']
 
             # write headers to new file
-            with open('./TimeLogGUI/timelog.csv', 'w', newline='') as mycsv:
+            with open(self.file_path, 'w', newline='') as mycsv:
                 csv.writer(mycsv).writerow(headers)
 
         # append rows to file
-        with open('./TimeLogGUI/timelog.csv', 'a', newline='') as f:
+        with open(self.file_path, 'a', newline='') as f:
             # write row
             csv.writer(f).writerow(row)
-            print('File is not empty, writing to file...')
+            print('Appending to file...')
 
-    #function used to check if timelog file exists and is empty
+    # function used to check if timelog file exists and is empty
+    # returns True is file is empty or does not exist, else returns false
     def is_file_empty(self, file_path):
         # Check if file exist and it is empty
         if os.path.exists(file_path): # does the path exist? 
