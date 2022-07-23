@@ -2,15 +2,15 @@
 #  - App should have options for Time (minutes), name, description, jobsite/location.
 
 #from distutils.log import Log
-from sqlite3 import Date
+#from sqlite3 import Date
 import tkinter as tk
 from tkinter import ttk, messagebox
-from tkcalendar import Calendar, DateEntry
+from tkcalendar import DateEntry
 import csv
 import os
 import pandas as pd
 
-CSV_FILE_PATH = './TimeLogGUI/timelog.csv'
+CSV_FILE_PATH = './WorkTimeLog/TimeLogGUI/timelog.csv'
 
 class MainWindow(tk.Frame):
     def __init__(self, container): # class constructor
@@ -62,30 +62,35 @@ class MainWindow(tk.Frame):
         self.location_entry.grid(column=1, row=4, sticky=tk.EW, padx=5, pady=5)
 
         # submit button
-        submit_button = ttk.Button(
+        self.submit_button = ttk.Button(
             self, 
             text='Submit',
             command=lambda \
+            da=self.date,
             t=self.time_spent_entry,
             u=self.affected_user_entry,
-            d=self.description_entry,
+            de=self.description_entry,
             l=self.location_entry: \
-            self.submit(t,u,d,l)
+            self.submit(da,t,u,de,l)
             ) # submit_button
-        submit_button.grid(column=1, row=5, padx=5, pady=5)
+        self.submit_button.grid(column=2, row=5, padx=5, pady=5)
 
         # view log button
-        view_log = ttk.Button(self, text='View Log', command=self.open_log)
-        view_log.grid(column=0, row=5, padx=5, pady=5)
+        self.view_log = ttk.Button(self, text='View Log', command=self.open_log)
+        self.view_log.grid(column=0, row=5, padx=5, pady=5)
+
+        # timesheet button
+        self.timesheet_button = ttk.Button(self, text="Timesheet", command=self.timesheet)
+        self.timesheet_button.grid(column=1, row=5, padx=5, pady=5)
 
         # add padding to the frame and show it
         self.grid(padx=10, pady=10, sticky=tk.NSEW)
 
-    def submit(self, time, user, des, loc):
+    def submit(self, date, time, user, des, loc):
         
         # verify all fields were entered
-        if(time.get() and user.get() and des.get() and loc.get()):
-            self.save_to_file([time.get(), user.get(), des.get(), loc.get()])
+        if(date.get() and time.get() and user.get() and des.get() and loc.get()):
+            self.save_to_file([date.get(), time.get(), user.get(), des.get(), loc.get()])
 
             # clear entry fields after data is saved
             self.clear_entries([time, user, des, loc])
@@ -106,6 +111,10 @@ class MainWindow(tk.Frame):
     def open_log(self):
         LogWindow(self)
 
+    # used to open timesheet frame
+    def timesheet(self):
+        Timesheet(self)
+
     # used to save text from entries to csv file
     def save_to_file(self, row):
         # checking if the file exists and is empty
@@ -113,7 +122,7 @@ class MainWindow(tk.Frame):
             print('File does not exist, creating and writing headers...')
 
             # create header arrary
-            headers = ['time_spent', 'affected_user', 'description', 'location']
+            headers = ['date', 'time_spent', 'affected_user', 'description', 'location']
 
             # write headers to new file
             with open(CSV_FILE_PATH, 'w', newline='') as mycsv:
@@ -152,10 +161,11 @@ class LogWindow(tk.Toplevel):
     
     # create the tree widget displaying log data
     def create_tree_widget(self):
-        columns = ['time_spent', 'affected_user', 'description', 'location']
+        columns = ['date', 'time_spent', 'affected_user', 'description', 'location']
         tree = ttk.Treeview(self, columns=columns, show='headings')
 
         # define headings
+        tree.heading('date', text='Date')
         tree.heading('time_spent', text='Time Spent')
         tree.heading('affected_user', text='Affected User')
         tree.heading('description', text='Description')
@@ -172,12 +182,13 @@ class LogWindow(tk.Toplevel):
         with open(CSV_FILE_PATH, newline='') as f:
             read = csv.DictReader(f, delimiter=',')
             for row in read:
+                date = row['date']
                 time = row['time_spent']
                 user = row['affected_user']
                 des = row['description']
                 loc = row['location']
                 
-                tree.insert('', 0, values=(time, user, des, loc))
+                tree.insert('', 0, values=(date, time, user, des, loc))
         
         # if the tree element is selected open up a window that shows its info
         tree.bind('<<TreeviewSelect>>', self.item_selected)
@@ -191,25 +202,37 @@ class LogWindow(tk.Toplevel):
             # show a message
             messagebox.showinfo(title='Information', message= \
                 f'Time: {record[0]}\n\nUser: {record[1]}\n\nDescription: {record[2]}\n\nLocation: {record[3]}')
-
-
-
-    # def read_file(self):
-    #     # open file
-    #     with open(CSV_FILE_PATH, newline = "") as file:
-    #         reader = csv.reader(file)
-
-    #         # r and c tell us where to grid the labels
-    #         r = 0
-    #         for col in reader:
-    #             c = 0
-    #             for row in col:
-    #                 # i've added some styling
-    #                 label = tk.Label(self, text=row, border=1, borderwidth=1)
-    #                 label.grid(row = r, column = c, padx=3, pady=3)
-    #                 c += 1
-    #             r += 1
         
+class Timesheet(tk.Toplevel):
+    def __init__(self, container): # class constructor
+        super().__init__(container)
+
+        # function to configure the grid
+        self.rowcol()
+
+        self.start_date_label = ttk.Label(self, text='Start Date:')
+        self.start_date_label.grid(column=0, row=0, padx=5, pady=5)
+
+        self.start_date = DateEntry(self)
+        self.start_date.grid(column=1, row=0, padx=5, pady=5)
+
+        self.end_date_label = ttk.Label(self, text='Start Date:')
+        self.end_date_label.grid(column=2, row=0, padx=5, pady=5)
+
+        self.end_date = DateEntry(self)
+        self.end_date.grid(column=3, row=0, padx=5, pady=5)
+
+        self.go = ttk.Button(self, text='Go', command=self.calculate_time)
+        self.go.grid(column=4, row=0, padx=5, pady=5)
+
+    # configure rows and columns
+    def rowcol(self):
+        col = 5
+        for i in range(0, col):
+            self.columnconfigure(i, weight=1)
+
+    def calculate_time(self):
+        ttk.Label(self, text='Time Calculated').grid()
 
 class App(tk.Tk):
     def __init__(self):
