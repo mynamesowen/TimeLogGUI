@@ -5,12 +5,13 @@
 #from sqlite3 import Date
 import tkinter as tk
 from tkinter import ttk, messagebox
+from numpy import datetime64
 from tkcalendar import DateEntry
 import csv
 import os
 import pandas as pd
 
-CSV_FILE_PATH = './WorkTimeLog/TimeLogGUI/timelog.csv'
+CSV_FILE_PATH = './TimeLogGUI/TimeLogGUI/timelog.csv'
 
 class MainWindow(tk.Frame):
     def __init__(self, container): # class constructor
@@ -156,7 +157,6 @@ class LogWindow(tk.Toplevel):
         self.resizable(0, 0)
         
         # get the csv file
-        self.log = pd.read_csv(CSV_FILE_PATH)
         self.tree = self.create_tree_widget()
     
     # create the tree widget displaying log data
@@ -232,7 +232,13 @@ class Timesheet(tk.Toplevel):
             self.columnconfigure(i, weight=1)
 
     def calculate_time(self):
-        ttk.Label(self, text='Time Calculated').grid()
+        timelog = pd.read_csv(CSV_FILE_PATH)
+        timelog['date'] = timelog['date'].astype('datetime64') # set column to datetime dtype
+
+        temp = timelog[timelog.date.between(self.start_date.get(), self.end_date.get())]
+        ttk.Label(self, text=temp).grid()
+
+
 
 class App(tk.Tk):
     def __init__(self):
