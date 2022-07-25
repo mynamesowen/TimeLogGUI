@@ -5,7 +5,7 @@
 #from sqlite3 import Date
 import tkinter as tk
 from tkinter import ttk, messagebox
-from numpy import datetime64
+import numpy as np
 from tkcalendar import DateEntry
 import csv
 import os
@@ -210,16 +210,16 @@ class Timesheet(tk.Toplevel):
 
         # function to configure the grid
         self.rowcol()
-        self.resizable(False, False)
+        #self.resizable(False, False)
 
         self.start_date_label = ttk.Label(self, text='Start Date:')
-        self.start_date_label.grid(column=0, row=0, padx=5, pady=5)
+        self.start_date_label.grid(column=0, row=0, padx=5, pady=5, sticky=tk.E)
 
         self.start_date = DateEntry(self)
         self.start_date.grid(column=1, row=0, padx=5, pady=5)
 
-        self.end_date_label = ttk.Label(self, text='Start Date:')
-        self.end_date_label.grid(column=2, row=0, padx=5, pady=5)
+        self.end_date_label = ttk.Label(self, text='End Date:')
+        self.end_date_label.grid(column=2, row=0, padx=5, pady=5, sticky=tk.E)
 
         self.end_date = DateEntry(self)
         self.end_date.grid(column=3, row=0, padx=5, pady=5)
@@ -230,17 +230,30 @@ class Timesheet(tk.Toplevel):
     # configure rows and columns
     def rowcol(self):
         col = 5
-        for i in range(0, col):
+        for i in range(col):
             self.columnconfigure(i, weight=1)
+        self.rowconfigure(0, weight=1)
+        self.rowconfigure(1, weight=2)
+        self.rowconfigure(2, weight=20)
 
     def calculate_time(self):
         timelog = pd.read_csv(CSV_FILE_PATH)
-        timelog['date'] = timelog['date'].astype('datetime64') # set column to datetime dtype
 
-        temp = timelog[timelog.date.between(self.start_date.get(), self.end_date.get())].reset_index(drop=True) # create new temp df with only the dates required
-        temp = temp.drop(columns=['affected_user', 'description'])
-        temp = temp.sort_values(by=['date'])
-        ttk.Label(self, text=temp.to_string()).grid(row=1)
+        # clean data, drop unneeded columns, sort by date
+        timelog['date'] = timelog['date'].astype('datetime64') # set column to datetime dtype
+        timelog = timelog[timelog.date.between(self.start_date.get(), self.end_date.get())].reset_index(drop=True) # create new temp df with only the dates required
+        timelog = timelog.drop(columns=['affected_user', 'description'])
+        timelog = timelog.sort_values(by=['date'])
+
+        # create pivot table out of queried data
+        table = timelog.pivot_table(index=['location'], columns=['date'], values=['time_spent'], aggfunc=np.sum, fill_value=0)
+        
+        # add pivot table data to a Text widget and display it
+        textvar = tk.Text(self, height=100, width=200, spacing1=5)
+        textvar.insert(tk.END, table)
+        textvar.grid(row=1, column=0, columnspan=5, sticky=tk.NSEW, padx=3, pady=3, ipadx=3, ipady=3)
+        
+        
 
 
 

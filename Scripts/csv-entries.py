@@ -58,7 +58,7 @@ with open(csv_path, 'a', newline='') as f:
         print('Appending to file...')
 
 # create new events and add them to an array
-for i in range(100):
+for i in range(200):
     incidents.append([get_date(), get_time(), get_user(), get_des(), get_loc()])
 
 with open(csv_path, 'a', newline='') as f:
