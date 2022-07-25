@@ -11,7 +11,7 @@ import csv
 import os
 import pandas as pd
 
-CSV_FILE_PATH = './TimeLogGUI/TimeLogGUI/timelog.csv'
+CSV_FILE_PATH = './TimeLogGUI/timelog.csv'
 
 class MainWindow(tk.Frame):
     def __init__(self, container): # class constructor
@@ -195,6 +195,7 @@ class LogWindow(tk.Toplevel):
 
         return tree
 
+    # function for displaying a specific item in the tree
     def item_selected(self, event):
         for selected_item in self.tree.selection():
             item = self.tree.item(selected_item)
@@ -209,6 +210,7 @@ class Timesheet(tk.Toplevel):
 
         # function to configure the grid
         self.rowcol()
+        self.resizable(False, False)
 
         self.start_date_label = ttk.Label(self, text='Start Date:')
         self.start_date_label.grid(column=0, row=0, padx=5, pady=5)
@@ -235,8 +237,10 @@ class Timesheet(tk.Toplevel):
         timelog = pd.read_csv(CSV_FILE_PATH)
         timelog['date'] = timelog['date'].astype('datetime64') # set column to datetime dtype
 
-        temp = timelog[timelog.date.between(self.start_date.get(), self.end_date.get())]
-        ttk.Label(self, text=temp).grid()
+        temp = timelog[timelog.date.between(self.start_date.get(), self.end_date.get())].reset_index(drop=True) # create new temp df with only the dates required
+        temp = temp.drop(columns=['affected_user', 'description'])
+        temp = temp.sort_values(by=['date'])
+        ttk.Label(self, text=temp.to_string()).grid(row=1)
 
 
 
