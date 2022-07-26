@@ -1,23 +1,23 @@
 # Goal: Make a Python GUI app that can be used to track my working time and incidents.
 #  - App should have options for Time (minutes), name, description, jobsite/location.
 
-#from distutils.log import Log
-#from sqlite3 import Date
 import tkinter as tk
 from tkinter import ttk, messagebox
-import numpy as np
+from numpy import sum
 from tkcalendar import DateEntry
 import csv
-import os
 import pandas as pd
+from pathlib import Path
 
-CSV_FILE_PATH = './TimeLogGUI/timelog.csv'
+CSV_DIRECTORY = 'C:/Temp/TimeLog/'
+CSV_FILE_PATH = 'C:/Temp/TimeLog/TimeLog.csv'
 
 class MainWindow(tk.Frame):
     def __init__(self, container): # class constructor
         super().__init__(container) #calls the constructor of the Tk parent class. gives us access to the methods of the superclass Tk().
         
-        font_style = ("Helvetica", 16)
+        self.font_style = ("Helvetica", 16)
+        self.headers = ['date', 'time_spent', 'affected_user', 'description', 'location']
         
         # configure the grid
         self.columnconfigure(0, weight=1)
@@ -28,38 +28,38 @@ class MainWindow(tk.Frame):
         for i in range(0,6):
             self.rowconfigure(i, weight=2)
 
-        self.date_label = ttk.Label(self, text='Date:', font=font_style)
+        self.date_label = ttk.Label(self, text='Date:', font=self.font_style)
         self.date_label.grid(column=0, row=0, sticky=tk.E, padx=5, pady=5)
 
         self.date = DateEntry(self)
         self.date.grid(column=1, row=0, sticky=tk.W, padx=5, pady=5)
 
         # time spent label and entry
-        self.time_spent_label = ttk.Label(self, text="Time (mins):", font=font_style)
+        self.time_spent_label = ttk.Label(self, text="Time (mins):", font=self.font_style)
         self.time_spent_label.grid(column=0, row=1, sticky=tk.E, padx=5, pady=5)
 
-        self.time_spent_entry = ttk.Entry(self, font=font_style)
+        self.time_spent_entry = ttk.Entry(self, font=self.font_style)
         self.time_spent_entry.grid(column=1, row=1, sticky=tk.EW, padx=5, pady=5)
 
         # name label and entry
-        self.affected_user_label = ttk.Label(self, text="Affected User:", font=font_style)
+        self.affected_user_label = ttk.Label(self, text="Affected User:", font=self.font_style)
         self.affected_user_label.grid(column=0, row=2, sticky=tk.E, padx=5, pady=5)
 
-        self.affected_user_entry = ttk.Entry(self, font=font_style)
+        self.affected_user_entry = ttk.Entry(self, font=self.font_style)
         self.affected_user_entry.grid(column=1, row=2, sticky=tk.EW, padx=5, pady=5)
 
         # description label and entry
-        self.description_label = ttk.Label(self, text="Description:", font=font_style)
+        self.description_label = ttk.Label(self, text="Description:", font=self.font_style)
         self.description_label.grid(column=0, row=3, sticky=tk.E, padx=5, pady=5)
 
-        self.description_entry = ttk.Entry(self, font=font_style)
+        self.description_entry = ttk.Entry(self, font=self.font_style)
         self.description_entry.grid(column=1, row=3, sticky=tk.EW, padx=5, pady=5)
 
         # location label and entry
-        self.location_label = ttk.Label(self, text='Location:', font=font_style)
+        self.location_label = ttk.Label(self, text='Location:', font=self.font_style)
         self.location_label.grid(column=0, row=4, sticky=tk.E, padx=5, pady=5)
 
-        self.location_entry = ttk.Entry(self, font=font_style)
+        self.location_entry = ttk.Entry(self, font=self.font_style)
         self.location_entry.grid(column=1, row=4, sticky=tk.EW, padx=5, pady=5)
 
         # submit button
@@ -118,34 +118,24 @@ class MainWindow(tk.Frame):
 
     # used to save text from entries to csv file
     def save_to_file(self, row):
-        # checking if the file exists and is empty
-        if self.is_file_empty(CSV_FILE_PATH):
+
+        # try to write to the file. if it does not exist create it and write data
+        try:
+            # append rows to file
+            with open(CSV_FILE_PATH, 'a', newline='') as f:
+                # write row
+                csv.writer(f).writerow(row)
+                print('Appending to file...')
+
+        except FileNotFoundError:
+            Path(CSV_DIRECTORY).mkdir(parents=True, exist_ok=True) # create the directory if it does not exist.
             print('File does not exist, creating and writing headers...')
 
-            # create header arrary
-            headers = ['date', 'time_spent', 'affected_user', 'description', 'location']
+            # write headers and entries to new file
+            with open(CSV_FILE_PATH, 'w', newline='') as f:
+                csv.writer(f).writerow(self.headers)
+                csv.writer(f).writerow(row)
 
-            # write headers to new file
-            with open(CSV_FILE_PATH, 'w', newline='') as mycsv:
-                csv.writer(mycsv).writerow(headers)
-
-        # append rows to file
-        with open(CSV_FILE_PATH, 'a', newline='') as f:
-            # write row
-            csv.writer(f).writerow(row)
-            print('Appending to file...')
-
-    # function used to check if timelog file exists and is empty
-    # returns True is file is empty or does not exist, else returns false
-    def is_file_empty(self, file_path):
-        # Check if file exist and it is empty
-        if os.path.exists(file_path): # does the path exist? 
-            if os.stat(file_path).st_size == 0: # path exists, is it empty?
-                return True # if empty return True
-            else:
-                return False # if not empty return false
-        else:
-            return True # if path does not exist return True
 
 class LogWindow(tk.Toplevel):
     def __init__(self, container): # class constructor
@@ -237,23 +227,43 @@ class Timesheet(tk.Toplevel):
         self.rowconfigure(2, weight=20)
 
     def calculate_time(self):
-        timelog = pd.read_csv(CSV_FILE_PATH)
+        try:
+            timelog = pd.read_csv(CSV_FILE_PATH)
+        except pd.errors.EmptyDataError as e:
+            messagebox.showerror(
+                title="Error",
+                message=f"Error loading data from file...\n\nTimeLog.csv file is empty. \n\nResolutions: \
+                    \n 1.Delete the TimeLog from (C:\\temp) and re-enter incidents\
+                    \n 2.Contact Owen for assistance."
+            )
+        except FileNotFoundError:
+            messagebox.showerror(
+                title="Error",
+                message="Timesheet file does not exist or contains no entries."
+            )
 
-        # clean data, drop unneeded columns, sort by date
-        timelog['date'] = timelog['date'].astype('datetime64') # set column to datetime dtype
-        timelog = timelog[timelog.date.between(self.start_date.get(), self.end_date.get())].reset_index(drop=True) # create new temp df with only the dates required
-        timelog = timelog.drop(columns=['affected_user', 'description'])
-        timelog = timelog.sort_values(by=['date'])
+        try:
+            # clean data, drop unneeded columns, sort by date
+            timelog['date'] = timelog['date'].astype('datetime64') # set column to datetime dtype
+            timelog = timelog[timelog.date.between(self.start_date.get(), self.end_date.get())].reset_index(drop=True) # create new temp df with only the dates required
+            timelog = timelog.drop(columns=['affected_user', 'description'])
+            timelog = timelog.sort_values(by=['date'])
 
-        # create pivot table out of queried data
-        table = timelog.pivot_table(index=['location'], columns=['date'], values=['time_spent'], aggfunc=np.sum, fill_value=0)
-        # To add totals...: margins=True, margins_name='Totals'
-        
-        # add pivot table data to a Text widget and display it
-        textvar = tk.Text(self, height=40, width=200, spacing1=5)
-        textvar.insert(tk.END, table)
-        textvar.grid(row=1, column=0, columnspan=5, sticky=tk.NSEW, padx=3, pady=3, ipadx=3, ipady=3)
-        
+            # create pivot table out of queried data
+            table = timelog.pivot_table(index=['location'], columns=['date'], values=['time_spent'], aggfunc=sum, fill_value=0)
+            # To add totals...: margins=True, margins_name='Totals'
+            
+            # add pivot table data to a Text widget and display it
+            textvar = tk.Text(self, height=40, width=200, spacing1=5)
+            textvar.insert(tk.END, table)
+            textvar.grid(row=1, column=0, columnspan=5, sticky=tk.NSEW, padx=3, pady=3, ipadx=3, ipady=3)
+        except KeyError:
+            messagebox.showerror(
+                title="Error",
+                message="Error loading data from file. Headers in CSV file are not configured correctly. Contact Owen for assistance"
+            )
+
+
     
 class App(tk.Tk):
     def __init__(self):

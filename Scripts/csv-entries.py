@@ -3,7 +3,7 @@
 import csv
 import random
 
-csv_path = "./TimeLogGUI/timelog.csv"
+csv_path = 'C:/Temp/TimeLog/TimeLog.csv'
 
 names = ['Owen', 'Paul', 'Brian', 'Mack', 'Steve', 'Alison', 'Megan',
         'Corey', 'Tyler', 'Amanda', 'Rebecca', 'Katie', 'Lauren']
