@@ -1,302 +1,206 @@
 date,time_spent,affected_user,description,location
-5/21/2022,120,Steve,Information Request,Marketing
-9/2/2022,120,Paul,Purchase new laptop,Volpe
-5/23/2022,30,Tyler,Outlook problem,WSL5
-4/28/2022,120,Alison,Phone broken,Beth Israel
-8/21/2022,30,Rebecca,New computer,MGH
-4/22/2022,60,Steve,Teams problem,Comm Pier
-8/22/2022,120,Alison,Outlook problem,SPO
-11/4/2022,90,Rebecca,Teams problem,SPO
-10/1/2022,15,Megan,Replace printer toner,SPD
-9/29/2022,15,Lauren,Computer broken,WSL5
-11/10/2022,60,Katie,Teams problem,Main Office
-12/14/2022,120,Tyler,Computer broken,WSL5
-9/26/2022,30,Katie,OneDrive issue,Accounting
-8/5/2022,120,Corey,Purchase new phone,SPO
-5/11/2022,60,Corey,Replace printer toner,MGH
-3/20/2022,45,Owen,Purchase new laptop,SPD
-2/7/2022,30,Rebecca,New phone,Accounting
-1/7/2022,60,Lauren,Computer broken,Main Office
-10/20/2022,45,Steve,OneDrive issue,Accounting
-2/23/2022,30,Megan,New phone,SPO
-6/8/2022,15,Tyler,New computer,Beth Israel
-6/7/2022,30,Amanda,Computer broken,Accounting
-3/11/2022,15,Brian,Computer broken,WSL5
-8/13/2022,90,Alison,Outlook problem,Beth Israel
-2/15/2022,90,Owen,Purchase new phone,SPO
-3/25/2022,120,Owen,Phone broken,Accounting
-12/18/2022,30,Amanda,Phone broken,SPD
-3/13/2022,30,Corey,Outlook problem,Beth Israel
-11/6/2022,45,Mack,New computer,WSL5
-6/23/2022,120,Lauren,Replace printer toner,MGH
-5/3/2022,45,Katie,New phone,Volpe
-11/17/2022,30,Steve,Teams problem,Volpe
-4/2/2022,30,Mack,Outlook problem,WSL5
-10/9/2022,45,Katie,New computer,Accounting
-7/11/2022,90,Owen,Information Request,Marketing
-11/30/2022,120,Paul,New computer,SPD
-6/9/2022,120,Lauren,Purchase new laptop,SPO
-10/18/2022,30,Amanda,Replace printer toner,WSL5
-8/12/2022,45,Alison,New phone,Beth Israel
-5/23/2022,60,Katie,New computer,Marketing
-8/3/2022,45,Katie,OneDrive issue,Amazon
-1/16/2022,30,Rebecca,Excel issue,Accounting
-10/11/2022,15,Mack,Information Request,Beth Israel
-9/23/2022,90,Katie,New computer,Marketing
-6/27/2022,45,Katie,Information Request,MGH
-12/15/2022,15,Owen,Purchase printer,Beth Israel
-5/21/2022,30,Rebecca,OneDrive issue,SPO
-5/7/2022,90,Mack,Phone broken,Accounting
-7/5/2022,120,Brian,Information Request,SPD
-7/6/2022,60,Katie,OneDrive issue,Amazon
-8/11/2022,120,Tyler,Purchase new phone,Amazon
-10/2/2022,30,Steve,Teams problem,Beth Israel
-1/29/2022,120,Amanda,Purchase new laptop,Marketing
-7/6/2022,45,Megan,Replace printer toner,MGH
-7/8/2022,15,Lauren,Outlook problem,Marketing
-8/5/2022,30,Rebecca,Teams problem,Main Office
-12/19/2022,120,Paul,New phone,SPO
-1/14/2022,120,Mack,OneDrive issue,SPO
-12/16/2022,30,Rebecca,Outlook problem,SPO
-10/24/2022,60,Lauren,Computer broken,Comm Pier
-12/22/2022,30,Tyler,Replace printer toner,Comm Pier
-8/30/2022,90,Corey,Teams problem,SPD
-7/5/2022,90,Rebecca,Purchase new phone,Marketing
-5/8/2022,15,Megan,Purchase new laptop,Beth Israel
-12/2/2022,90,Paul,Purchase new laptop,SPO
-4/10/2022,90,Paul,New computer,Beth Israel
-9/28/2022,45,Corey,New phone,Beth Israel
-2/12/2022,30,Paul,Information Request,Comm Pier
-3/26/2022,45,Brian,OneDrive issue,Marketing
-8/26/2022,45,Rebecca,OneDrive issue,SPD
-5/1/2022,60,Megan,New phone,SPD
-11/26/2022,45,Katie,Information Request,Accounting
-8/6/2022,60,Katie,Purchase printer,MGH
-11/22/2022,45,Brian,Purchase printer,SPD
-9/14/2022,90,Lauren,Replace printer toner,SPO
-12/25/2022,120,Owen,New phone,SPO
-7/22/2022,30,Megan,Computer broken,SPD
-10/11/2022,45,Megan,Computer broken,Comm Pier
-2/28/2022,90,Megan,Phone broken,WSL5
-1/17/2022,30,Tyler,Computer broken,SPO
-8/20/2022,30,Katie,Phone broken,Accounting
-6/18/2022,90,Paul,Purchase new phone,Volpe
-8/27/2022,30,Brian,Information Request,WSL5
-4/3/2022,45,Paul,Purchase printer,SPO
-6/29/2022,15,Steve,Computer broken,WSL5
-3/3/2022,120,Alison,New computer,WSL5
-7/13/2022,45,Alison,Purchase new laptop,WSL5
-4/12/2022,90,Paul,Outlook problem,Comm Pier
-5/14/2022,45,Lauren,Phone broken,WSL5
-1/11/2022,90,Katie,Replace printer toner,WSL5
-4/27/2022,90,Katie,Phone broken,WSL5
-4/21/2022,15,Steve,Purchase new phone,Volpe
-1/18/2022,90,Megan,Purchase new laptop,Accounting
-12/7/2022,15,Lauren,Replace printer toner,MGH
-8/25/2022,30,Owen,New computer,Marketing
-5/27/2022,45,Brian,Purchase new phone,Accounting
-7/13/2022,60,Alison,Teams problem,Volpe
-4/25/2022,120,Tyler,Excel issue,MGH
-9/14/2022,120,Lauren,Phone broken,MGH
-5/11/2022,15,Rebecca,New computer,SPD
-7/5/2022,30,Owen,Manual input,SPD
-12/28/2022,120,Megan,New phone,Accounting
-2/1/2022,30,Katie,Replace printer toner,Volpe
-10/30/2022,45,Corey,Teams problem,Comm Pier
-11/10/2022,90,Corey,New computer,SPD
-8/30/2022,45,Paul,Excel issue,Main Office
-8/7/2022,120,Mack,Information Request,Volpe
-1/21/2022,15,Amanda,New phone,Marketing
-7/9/2022,60,Mack,Replace printer toner,Amazon
-5/25/2022,45,Katie,Computer broken,Comm Pier
-7/9/2022,15,Amanda,Purchase printer,WSL5
-7/23/2022,30,Mack,Phone broken,WSL5
-5/11/2022,45,Corey,Computer broken,WSL5
-11/4/2022,30,Steve,Replace printer toner,Comm Pier
-5/25/2022,45,Megan,Replace printer toner,Volpe
-1/15/2022,60,Owen,Outlook problem,MGH
-11/18/2022,45,Brian,Replace printer toner,Accounting
-3/21/2022,60,Corey,Purchase new phone,Amazon
-2/24/2022,60,Megan,New phone,SPO
-4/25/2022,15,Amanda,Purchase printer,Main Office
-8/7/2022,60,Tyler,Teams problem,WSL5
-12/26/2022,15,Alison,Purchase new laptop,SPD
-9/15/2022,90,Mack,Replace printer toner,SPO
-12/5/2022,60,Brian,New phone,SPO
-8/18/2022,90,Steve,Purchase new laptop,WSL5
-5/3/2022,90,Mack,Outlook problem,SPO
-5/18/2022,45,Megan,OneDrive issue,SPO
-1/8/2022,45,Rebecca,Phone broken,Beth Israel
-5/4/2022,90,Amanda,New computer,WSL5
-2/23/2022,30,Megan,Purchase new phone,Comm Pier
-1/25/2022,60,Lauren,Purchase new laptop,SPD
-3/24/2022,45,Lauren,Purchase new phone,Main Office
-3/16/2022,120,Amanda,Purchase new laptop,SPD
-4/27/2022,30,Tyler,Outlook problem,WSL5
-12/12/2022,30,Steve,Excel issue,Accounting
-6/25/2022,90,Tyler,Phone broken,Accounting
-5/6/2022,90,Katie,New phone,Accounting
-2/12/2022,45,Lauren,Computer broken,Main Office
-9/13/2022,60,Tyler,Purchase new phone,SPD
-3/26/2022,90,Alison,New computer,SPD
-3/29/2022,90,Megan,Information Request,WSL5
-7/19/2022,30,Alison,Teams problem,Beth Israel
-2/26/2022,120,Brian,Information Request,Beth Israel
-6/19/2022,60,Rebecca,Phone broken,Amazon
-12/22/2022,90,Corey,Teams problem,Volpe
-5/11/2022,90,Corey,Computer broken,MGH
-10/13/2022,45,Steve,Teams problem,SPD
-10/29/2022,30,Mack,Information Request,SPO
-11/20/2022,90,Owen,Computer broken,SPO
-4/11/2022,90,Rebecca,Information Request,Main Office
-4/18/2022,120,Steve,Purchase new phone,MGH
-9/28/2022,30,Katie,Replace printer toner,WSL5
-10/2/2022,30,Rebecca,Information Request,Amazon
-12/15/2022,30,Mack,Purchase new phone,Volpe
-6/23/2022,120,Paul,New computer,SPD
-8/10/2022,45,Tyler,OneDrive issue,Beth Israel
-8/16/2022,120,Mack,Purchase new laptop,Amazon
-3/6/2022,30,Paul,Outlook problem,Accounting
-12/8/2022,45,Tyler,Computer broken,SPD
-11/21/2022,60,Alison,Replace printer toner,Volpe
-11/6/2022,60,Corey,Purchase new laptop,WSL5
-10/3/2022,90,Owen,Purchase printer,MGH
-2/13/2022,60,Owen,Information Request,Beth Israel
-8/15/2022,120,Tyler,Outlook problem,MGH
-2/28/2022,90,Mack,Purchase new laptop,SPO
-3/18/2022,30,Tyler,Purchase new phone,Beth Israel
-5/13/2022,120,Corey,New phone,WSL5
-1/21/2022,15,Corey,Purchase printer,Accounting
-7/20/2022,90,Alison,Purchase new laptop,Accounting
-1/16/2022,30,Owen,Information Request,Comm Pier
-7/20/2022,45,Tyler,Replace printer toner,Amazon
-5/26/2022,90,Owen,OneDrive issue,Comm Pier
-5/10/2022,15,Owen,Information Request,Marketing
-8/30/2022,90,Tyler,Phone broken,WSL5
-3/16/2022,120,Corey,New computer,Beth Israel
-9/7/2022,30,Megan,Purchase new laptop,SPD
-1/16/2022,120,Alison,Purchase printer,Main Office
-10/2/2022,45,Alison,Information Request,WSL5
-3/3/2022,90,Katie,Purchase new laptop,Accounting
-5/23/2022,15,Owen,Purchase new phone,Comm Pier
-7/19/2022,60,Megan,New phone,SPO
-11/10/2022,45,Tyler,Purchase new phone,SPO
-3/24/2022,15,Rebecca,Phone broken,Beth Israel
-4/30/2022,15,Rebecca,Outlook problem,Volpe
-5/24/2022,120,Amanda,Phone broken,Comm Pier
-2/28/2022,30,Brian,Teams problem,SPD
-10/12/2022,15,Mack,Excel issue,MGH
-2/10/2022,90,Lauren,OneDrive issue,Beth Israel
-2/11/2022,90,Katie,Information Request,SPD
-7/15/2022,120,Brian,New computer,Marketing
-4/21/2022,45,Amanda,OneDrive issue,Comm Pier
-4/29/2022,30,Steve,Computer broken,Accounting
-2/23/2022,120,Lauren,Excel issue,Beth Israel
-12/1/2022,45,Corey,Computer broken,SPO
-12/25/2022,15,Paul,Replace printer toner,Amazon
-12/4/2022,60,Lauren,New phone,Comm Pier
-1/20/2022,45,Corey,Purchase printer,Volpe
-11/18/2022,45,Alison,Phone broken,SPD
-7/10/2022,120,Amanda,Teams problem,Beth Israel
-3/26/2022,60,Owen,Information Request,Beth Israel
-2/24/2022,30,Megan,Purchase new phone,SPO
-11/26/2022,120,Amanda,New computer,Volpe
-6/11/2022,90,Corey,Purchase new laptop,WSL5
-7/13/2022,15,Mack,Outlook problem,WSL5
-8/9/2022,15,Mack,Purchase printer,SPO
-5/22/2022,120,Katie,Phone broken,Volpe
-4/4/2022,45,Mack,Outlook problem,Accounting
-6/28/2022,30,Lauren,Excel issue,Amazon
-12/2/2022,45,Corey,Purchase new laptop,Amazon
-7/9/2022,90,Mack,Information Request,WSL5
-5/5/2022,60,Owen,Information Request,Main Office
-4/9/2022,30,Rebecca,New computer,Amazon
-6/25/2022,120,Amanda,New phone,Accounting
-8/28/2022,90,Megan,New computer,WSL5
-10/7/2022,60,Mack,Purchase printer,WSL5
-10/14/2022,45,Tyler,Phone broken,Amazon
-3/28/2022,90,Lauren,Phone broken,Comm Pier
-6/9/2022,45,Mack,Purchase new laptop,Volpe
-10/2/2022,45,Megan,Purchase printer,Comm Pier
-9/24/2022,60,Paul,Teams problem,SPO
-6/11/2022,60,Megan,Outlook problem,Volpe
-12/8/2022,30,Megan,New computer,Accounting
-2/11/2022,15,Megan,Outlook problem,Main Office
-6/28/2022,120,Steve,Purchase new laptop,MGH
-9/23/2022,15,Lauren,Information Request,MGH
-8/14/2022,60,Rebecca,Purchase new phone,Main Office
-12/23/2022,60,Mack,Teams problem,SPD
-9/2/2022,30,Megan,Computer broken,WSL5
-1/24/2022,45,Alison,Purchase new laptop,Accounting
-7/26/2022,15,Paul,Computer broken,SPD
-3/9/2022,45,Brian,Purchase new laptop,SPD
-12/10/2022,15,Rebecca,New phone,Main Office
-3/22/2022,15,Paul,Teams problem,SPD
-5/16/2022,15,Brian,Information Request,SPD
-7/16/2022,90,Lauren,Outlook problem,Volpe
-5/11/2022,30,Lauren,New computer,WSL5
-3/13/2022,90,Paul,Purchase new laptop,Marketing
-9/13/2022,15,Katie,Purchase new laptop,Volpe
-6/24/2022,15,Megan,Outlook problem,Marketing
-10/1/2022,30,Alison,Information Request,Volpe
-11/12/2022,15,Owen,Purchase new phone,Beth Israel
-6/2/2022,15,Mack,Purchase new phone,WSL5
-8/30/2022,45,Corey,Purchase new laptop,Main Office
-9/3/2022,30,Paul,Purchase new phone,WSL5
-5/13/2022,90,Mack,Excel issue,SPD
-7/18/2022,45,Lauren,OneDrive issue,Marketing
-11/11/2022,30,Paul,Purchase new laptop,Marketing
-3/13/2022,45,Megan,Purchase printer,MGH
-12/28/2022,15,Megan,New phone,Volpe
-7/26/2022,45,Brian,Information Request,Main Office
-7/23/2022,15,Brian,New computer,Amazon
-8/18/2022,15,Katie,OneDrive issue,Amazon
-8/14/2022,90,Megan,Computer broken,Accounting
-9/27/2022,120,Paul,Phone broken,MGH
-2/24/2022,30,Katie,OneDrive issue,Main Office
-3/16/2022,15,Lauren,New phone,Marketing
-2/13/2022,45,Katie,Computer broken,Main Office
-11/8/2022,15,Megan,OneDrive issue,Main Office
-2/24/2022,15,Owen,Purchase new phone,Comm Pier
-9/22/2022,15,Megan,New phone,WSL5
-2/10/2022,15,Lauren,New phone,MGH
-7/14/2022,15,Amanda,Purchase new phone,Volpe
-10/16/2022,90,Steve,Replace printer toner,Marketing
-9/17/2022,30,Tyler,Phone broken,SPO
-1/15/2022,15,Corey,OneDrive issue,Beth Israel
-9/23/2022,30,Tyler,Excel issue,Main Office
-3/2/2022,15,Owen,Purchase printer,MGH
-3/19/2022,90,Alison,Phone broken,SPD
-2/15/2022,120,Paul,New computer,Volpe
-11/28/2022,15,Paul,Outlook problem,SPD
-3/3/2022,60,Alison,Purchase printer,WSL5
-1/18/2022,120,Mack,New computer,Marketing
-8/12/2022,45,Owen,New phone,MGH
-7/14/2022,60,Corey,Teams problem,WSL5
-11/27/2022,120,Megan,Phone broken,Volpe
-9/2/2022,15,Tyler,Information Request,WSL5
-7/27/2022,120,Alison,Phone broken,SPO
-1/16/2022,120,Corey,Information Request,Accounting
-10/22/2022,45,Steve,Purchase new phone,MGH
-3/14/2022,90,Paul,New computer,Main Office
-2/20/2022,60,Steve,Teams problem,Volpe
-1/4/2022,60,Rebecca,Purchase new laptop,SPD
-5/26/2022,120,Megan,Replace printer toner,Amazon
-4/11/2022,45,Lauren,New phone,SPD
-3/9/2022,120,Corey,New phone,Beth Israel
-7/9/2022,60,Katie,Purchase printer,Main Office
-2/15/2022,30,Paul,Phone broken,SPO
-4/2/2022,90,Alison,Outlook problem,Volpe
-2/13/2022,45,Alison,Phone broken,Volpe
-1/30/2022,30,Steve,Replace printer toner,Main Office
-9/22/2022,15,Steve,Phone broken,WSL5
-8/8/2022,15,Corey,New computer,Main Office
-3/5/2022,45,Corey,Teams problem,Beth Israel
-10/27/2022,30,Mack,Teams problem,SPO
-5/21/2022,45,Megan,OneDrive issue,Volpe
-8/12/2022,15,Brian,New phone,MGH
-3/16/2022,60,Katie,Outlook problem,Amazon
-8/2/2022,15,Steve,New phone,MGH
-2/21/2022,60,Katie,Excel issue,Comm Pier
-7/9/2022,120,Lauren,Purchase new phone,MGH
-3/26/2022,90,Brian,Computer broken,MGH
+7/26/22,30,Owen,help owen,Amazon
+7/26/22,15,Me,help me,Amazon
+7/26/22,30,Bob,help bob,Amazon
+7/25/22,30,Paul,help paul,MGH
+3/25/2022,90,Lauren,New computer,Comm Pier
+11/21/2022,90,Tyler,Outlook problem,Marketing
+10/14/2022,30,Rebecca,Outlook problem,Accounting
+4/22/2022,120,Rebecca,OneDrive issue,Beth Israel
+5/29/2022,60,Rebecca,Purchase printer,Volpe
+6/12/2022,60,Corey,Phone broken,SPD
+12/13/2022,45,Brian,Phone broken,Beth Israel
+9/13/2022,45,Mack,Information Request,Volpe
+3/27/2022,90,Katie,Computer broken,Main Office
+5/4/2022,15,Alison,Outlook problem,Accounting
+10/8/2022,45,Paul,Purchase printer,Beth Israel
+6/12/2022,90,Amanda,Teams problem,Main Office
+8/7/2022,45,Rebecca,OneDrive issue,SPO
+10/3/2022,90,Megan,Teams problem,MGH
+4/17/2022,15,Megan,New computer,Comm Pier
+6/16/2022,30,Lauren,Teams problem,Amazon
+6/3/2022,60,Tyler,New phone,SPD
+1/29/2022,15,Paul,Outlook problem,Beth Israel
+5/15/2022,90,Paul,OneDrive issue,Beth Israel
+12/26/2022,120,Megan,Replace printer toner,Marketing
+8/17/2022,120,Tyler,Information Request,Comm Pier
+12/15/2022,30,Steve,Purchase new laptop,Volpe
+8/28/2022,30,Steve,New phone,Amazon
+1/26/2022,45,Brian,Phone broken,Main Office
+2/26/2022,45,Paul,Information Request,Accounting
+9/29/2022,60,Amanda,Replace printer toner,Accounting
+8/26/2022,120,Megan,Teams problem,Comm Pier
+6/9/2022,60,Katie,Replace printer toner,SPO
+9/21/2022,45,Steve,Purchase new laptop,MGH
+2/28/2022,30,Tyler,Outlook problem,Accounting
+6/1/2022,30,Lauren,New phone,Volpe
+7/28/2022,90,Alison,OneDrive issue,Amazon
+10/17/2022,15,Corey,Purchase new laptop,WSL5
+5/5/2022,45,Mack,Purchase printer,Marketing
+4/14/2022,30,Lauren,Purchase new phone,MGH
+12/19/2022,45,Alison,Purchase new laptop,SPO
+5/16/2022,15,Lauren,New phone,Volpe
+8/28/2022,30,Megan,Information Request,Beth Israel
+2/22/2022,60,Amanda,Teams problem,Marketing
+7/1/2022,30,Katie,OneDrive issue,Marketing
+10/24/2022,120,Lauren,New computer,SPO
+3/10/2022,30,Rebecca,Replace printer toner,Marketing
+3/8/2022,120,Corey,Computer broken,Accounting
+5/23/2022,45,Mack,Information Request,Main Office
+6/11/2022,60,Corey,Purchase new laptop,Main Office
+3/13/2022,90,Owen,Computer broken,Volpe
+10/28/2022,15,Tyler,Replace printer toner,MGH
+11/21/2022,60,Mack,Information Request,Volpe
+8/20/2022,15,Megan,New phone,Volpe
+9/10/2022,60,Amanda,Replace printer toner,Marketing
+12/24/2022,120,Brian,Excel issue,SPO
+4/12/2022,90,Katie,Outlook problem,WSL5
+4/18/2022,30,Steve,Outlook problem,Main Office
+7/27/2022,30,Alison,Outlook problem,WSL5
+9/17/2022,30,Corey,New computer,Beth Israel
+1/4/2022,90,Tyler,New phone,SPD
+6/24/2022,30,Tyler,Phone broken,Main Office
+9/1/2022,90,Megan,OneDrive issue,Volpe
+4/25/2022,30,Alison,Information Request,WSL5
+11/25/2022,120,Alison,Outlook problem,Accounting
+3/17/2022,30,Corey,OneDrive issue,Accounting
+5/8/2022,120,Rebecca,Excel issue,SPO
+7/14/2022,60,Katie,Replace printer toner,Beth Israel
+4/8/2022,15,Tyler,New phone,Main Office
+1/27/2022,30,Rebecca,Information Request,WSL5
+6/22/2022,45,Steve,Teams problem,Main Office
+1/5/2022,45,Mack,Replace printer toner,MGH
+11/28/2022,45,Rebecca,New computer,SPO
+5/14/2022,120,Megan,Teams problem,Main Office
+6/24/2022,90,Megan,Computer broken,SPO
+10/27/2022,120,Corey,Outlook problem,Comm Pier
+1/25/2022,60,Brian,Information Request,Main Office
+5/19/2022,120,Tyler,Excel issue,MGH
+9/13/2022,90,Rebecca,Outlook problem,Amazon
+11/5/2022,15,Paul,Outlook problem,MGH
+4/9/2022,90,Steve,Purchase printer,Beth Israel
+2/18/2022,90,Brian,New computer,MGH
+2/2/2022,60,Megan,Excel issue,Beth Israel
+2/22/2022,90,Brian,New phone,WSL5
+1/3/2022,120,Alison,New computer,WSL5
+2/28/2022,120,Mack,Computer broken,Beth Israel
+7/11/2022,60,Corey,Excel issue,WSL5
+8/10/2022,60,Alison,Teams problem,Main Office
+2/6/2022,120,Amanda,Teams problem,Beth Israel
+9/24/2022,30,Steve,Phone broken,Main Office
+2/25/2022,90,Corey,Replace printer toner,Beth Israel
+12/11/2022,30,Mack,New computer,Beth Israel
+2/24/2022,120,Alison,Purchase new laptop,SPD
+5/2/2022,15,Rebecca,Purchase printer,SPO
+2/7/2022,30,Amanda,Purchase new laptop,Marketing
+9/6/2022,90,Owen,Phone broken,Amazon
+9/7/2022,15,Brian,New computer,SPO
+3/3/2022,60,Alison,Purchase printer,Main Office
+11/4/2022,90,Rebecca,Computer broken,Marketing
+1/30/2022,45,Mack,New computer,WSL5
+6/23/2022,90,Tyler,Purchase printer,MGH
+7/26/2022,90,Owen,Purchase printer,Beth Israel
+11/26/2022,90,Alison,Purchase printer,Comm Pier
+7/28/2022,15,Amanda,New computer,Main Office
+2/12/2022,45,Amanda,Teams problem,Marketing
+12/4/2022,120,Owen,Replace printer toner,Beth Israel
+12/4/2022,60,Megan,Purchase new laptop,Amazon
+10/22/2022,90,Steve,Purchase new laptop,Beth Israel
+12/23/2022,45,Brian,OneDrive issue,WSL5
+9/19/2022,45,Owen,Phone broken,Marketing
+9/6/2022,120,Steve,Outlook problem,WSL5
+8/29/2022,120,Mack,Information Request,SPO
+10/19/2022,45,Alison,Purchase printer,SPO
+7/5/2022,30,Lauren,Excel issue,Main Office
+8/2/2022,60,Tyler,Computer broken,Comm Pier
+6/13/2022,120,Megan,Excel issue,SPD
+3/14/2022,45,Steve,Outlook problem,MGH
+2/22/2022,60,Rebecca,Phone broken,Beth Israel
+8/13/2022,45,Amanda,Computer broken,WSL5
+1/22/2022,90,Amanda,New phone,Amazon
+6/21/2022,45,Brian,New phone,Beth Israel
+7/8/2022,60,Amanda,Replace printer toner,Volpe
+6/3/2022,120,Corey,Teams problem,Comm Pier
+11/26/2022,15,Rebecca,Information Request,Comm Pier
+1/11/2022,45,Mack,Purchase printer,Beth Israel
+10/13/2022,30,Corey,New computer,SPD
+4/13/2022,120,Steve,Outlook problem,Marketing
+3/19/2022,60,Katie,Excel issue,WSL5
+3/6/2022,45,Paul,Outlook problem,WSL5
+9/30/2022,15,Paul,Replace printer toner,MGH
+5/15/2022,30,Rebecca,Replace printer toner,Comm Pier
+10/7/2022,90,Steve,New phone,SPD
+11/25/2022,45,Steve,New phone,Marketing
+12/18/2022,30,Brian,OneDrive issue,WSL5
+7/18/2022,30,Alison,Replace printer toner,Main Office
+3/1/2022,15,Steve,Purchase printer,SPD
+3/13/2022,15,Mack,Phone broken,Accounting
+1/16/2022,45,Alison,Purchase new phone,MGH
+3/29/2022,120,Corey,Excel issue,Marketing
+8/3/2022,60,Paul,New computer,Amazon
+10/15/2022,60,Owen,Purchase printer,SPO
+2/22/2022,45,Amanda,Phone broken,MGH
+4/15/2022,60,Paul,Purchase new laptop,Amazon
+3/18/2022,90,Brian,Outlook problem,Beth Israel
+11/12/2022,120,Corey,Computer broken,Accounting
+7/6/2022,60,Owen,Purchase printer,Comm Pier
+3/16/2022,45,Megan,New phone,MGH
+3/28/2022,30,Steve,Computer broken,SPD
+2/17/2022,60,Steve,Purchase new laptop,Amazon
+4/27/2022,15,Megan,Computer broken,SPO
+4/5/2022,60,Megan,Outlook problem,Main Office
+7/3/2022,90,Corey,Phone broken,Comm Pier
+10/4/2022,120,Corey,New phone,Beth Israel
+3/6/2022,30,Paul,Excel issue,Beth Israel
+6/7/2022,30,Amanda,Excel issue,Accounting
+11/12/2022,15,Owen,Excel issue,Comm Pier
+4/6/2022,15,Amanda,New computer,Amazon
+7/13/2022,120,Lauren,Information Request,Beth Israel
+6/15/2022,120,Steve,Replace printer toner,Amazon
+4/18/2022,15,Megan,Information Request,SPD
+9/29/2022,45,Brian,Replace printer toner,Volpe
+5/22/2022,120,Steve,Teams problem,SPD
+11/18/2022,90,Lauren,Computer broken,SPD
+11/7/2022,30,Paul,Computer broken,Accounting
+7/7/2022,120,Tyler,Information Request,SPO
+12/9/2022,90,Katie,Excel issue,Accounting
+7/17/2022,30,Corey,Outlook problem,Marketing
+3/9/2022,30,Corey,New computer,Volpe
+9/29/2022,45,Tyler,Purchase printer,Main Office
+5/29/2022,45,Corey,Information Request,Comm Pier
+6/17/2022,15,Alison,Purchase printer,MGH
+2/28/2022,30,Megan,Purchase new phone,SPD
+9/28/2022,45,Corey,Purchase new phone,Marketing
+4/7/2022,60,Alison,Purchase new phone,WSL5
+7/29/2022,15,Paul,New computer,SPO
+3/27/2022,90,Alison,Teams problem,Volpe
+9/17/2022,120,Steve,OneDrive issue,Marketing
+9/17/2022,15,Alison,New phone,Accounting
+5/13/2022,60,Steve,Computer broken,MGH
+1/1/2022,90,Amanda,New computer,Amazon
+6/19/2022,60,Alison,Information Request,Volpe
+8/23/2022,60,Amanda,Purchase printer,Accounting
+5/8/2022,45,Amanda,Purchase new phone,Accounting
+2/13/2022,60,Megan,Purchase new laptop,MGH
+1/5/2022,45,Tyler,New computer,Accounting
+3/7/2022,90,Rebecca,Phone broken,Amazon
+12/4/2022,30,Owen,Excel issue,Main Office
+8/10/2022,90,Megan,Replace printer toner,WSL5
+6/9/2022,45,Paul,Purchase printer,SPD
+4/11/2022,60,Steve,Purchase new phone,Accounting
+1/6/2022,60,Paul,Purchase printer,Marketing
+1/28/2022,15,Owen,OneDrive issue,WSL5
+2/25/2022,60,Mack,Purchase printer,Volpe
+1/13/2022,120,Steve,Purchase new laptop,MGH
+7/25/2022,45,Rebecca,New computer,Amazon
+3/15/2022,15,Tyler,New phone,Volpe
+7/8/2022,30,Paul,Purchase printer,SPO
+4/17/2022,120,Brian,Purchase new phone,Comm Pier
+9/14/2022,30,Corey,Computer broken,Marketing
+3/17/2022,120,Alison,Replace printer toner,MGH
+8/1/2022,30,Tyler,Outlook problem,Main Office
+2/20/2022,45,Mack,Replace printer toner,Beth Israel
+8/14/2022,60,Owen,New computer,Beth Israel
+8/20/2022,60,Tyler,Information Request,Volpe
+8/12/2022,30,Paul,New computer,SPO
+7/26/22,30,Owen,Help,Main
