@@ -31,8 +31,8 @@ class MainWindow(tk.Frame):
         self.date_label = ttk.Label(self, text='Date:', font=self.font_style)
         self.date_label.grid(column=0, row=0, sticky=tk.E, padx=5, pady=5)
 
-        self.date = DateEntry(self)
-        self.date.grid(column=1, row=0, sticky=tk.W, padx=5, pady=5)
+        self.date_entry = DateEntry(self)
+        self.date_entry.grid(column=1, row=0, sticky=tk.W, padx=5, pady=5)
 
         # time spent label and entry
         self.time_spent_label = ttk.Label(self, text="Time (mins):", font=self.font_style)
@@ -63,17 +63,7 @@ class MainWindow(tk.Frame):
         self.location_entry.grid(column=1, row=4, sticky=tk.EW, padx=5, pady=5)
 
         # submit button
-        self.submit_button = ttk.Button(
-            self, 
-            text='Submit',
-            command=lambda \
-            da=self.date,
-            t=self.time_spent_entry,
-            u=self.affected_user_entry,
-            de=self.description_entry,
-            l=self.location_entry: \
-            self.submit(da,t,u,de,l)
-            ) # submit_button
+        self.submit_button = ttk.Button(self, text='Submit', command=self.submit) # submit_button
         self.submit_button.grid(column=2, row=5, padx=5, pady=5)
 
         # view log button
@@ -87,26 +77,37 @@ class MainWindow(tk.Frame):
         # add padding to the frame and show it
         self.grid(padx=10, pady=10, sticky=tk.NSEW)
 
-    def submit(self, date, time, user, des, loc):
+    def submit(self):
+        date = self.date_entry.get()
+        time = self.time_spent_entry.get()
+        user = self.affected_user_entry.get()
+        des = self.description_entry.get()
+        loc = self.location_entry.get()
         
         # verify all fields were entered
-        if(date.get() and time.get() and user.get() and des.get() and loc.get()):
-            self.save_to_file([date.get(), time.get(), user.get(), des.get(), loc.get()])
-
-            # clear entry fields after data is saved
-            self.clear_entries([time, user, des, loc])
+        if(date and time.isnumeric() and user and des and loc):
+            self.save_to_file([date, time, user, des, loc]) # save entries to file
+            self.clear_entries() # clear entry fields after data is saved
 
         else:
-            # if any field is blank present an error
-            messagebox.showinfo(
-                title='Error',
-                message='All fields must be entered before submitting'
-            )
+            if time.isnumeric() == False: # if time_spent is not an integer produce error
+                messagebox.showinfo(
+                    title='Error',
+                    message='Time spent must be a whole number (i.e. 15, 30, 60, etc.)'
+                )
+            else:
+                # if any field is blank present an error
+                messagebox.showinfo(
+                    title='Error',
+                    message='All fields must be entered before submitting'
+                )
     
     # clear the entry fields
-    def clear_entries(self, entries):
-        for i in entries:
-            i.delete(0, 'end')
+    def clear_entries(self):
+        self.time_spent_entry.delete(0, 'end')
+        self.affected_user_entry.delete(0, 'end')
+        self.description_entry.delete(0, 'end')
+        self.location_entry.delete(0, 'end')
 
     # used to open new LogWindow frame
     def open_log(self):
@@ -245,6 +246,7 @@ class Timesheet(tk.Toplevel):
         try:
             # clean data, drop unneeded columns, sort by date
             timelog['date'] = timelog['date'].astype('datetime64') # set column to datetime dtype
+            timelog['time_spent'] = timelog['time_spent'].astype('int64')
             timelog = timelog[timelog.date.between(self.start_date.get(), self.end_date.get())].reset_index(drop=True) # create new temp df with only the dates required
             timelog = timelog.drop(columns=['affected_user', 'description'])
             timelog = timelog.sort_values(by=['date'])

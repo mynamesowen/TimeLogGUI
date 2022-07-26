@@ -23,7 +23,7 @@ months = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
 
 location = ['Volpe', 'MGH', 'Main Office', 'Beth Israel', 'WSL5', 'Comm Pier', 'Amazon',
             'SPD', 'SPO', 'Marketing', 'Accounting']
-year = 2022
+year = 22
 
 incidents = []
 
