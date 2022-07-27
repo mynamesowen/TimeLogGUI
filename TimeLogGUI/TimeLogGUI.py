@@ -193,8 +193,8 @@ class LogWindow(tk.Toplevel):
             record = item['values']
             # show a message
             messagebox.showinfo(title='Information', message= \
-                f'Time: {record[0]}\n\nUser: {record[1]}\n\nDescription: {record[2]}\n\nLocation: {record[3]}')
-        
+                f'Date: {record[0]}\nTime: {record[1]} (mins)\nUser: {record[2]}\nDescription: {record[3]}\nLocation: {record[4]}')
+
 class Timesheet(tk.Toplevel):
     def __init__(self, container): # class constructor
         super().__init__(container)
@@ -252,19 +252,19 @@ class Timesheet(tk.Toplevel):
             timelog = timelog.sort_values(by=['date'])
 
             # create pivot table out of queried data
+            timelog['location'] = timelog['location'].str.upper() # make all items uppercase so that case doesnt matter.
             table = timelog.pivot_table(index=['location'], columns=['date'], values=['time_spent'], aggfunc=sum, fill_value=0)
             # To add totals...: margins=True, margins_name='Totals'
             
             # add pivot table data to a Text widget and display it
             textvar = tk.Text(self, height=40, width=200, spacing1=5)
             textvar.insert(tk.END, table)
-            textvar.grid(row=1, column=0, columnspan=5, sticky=tk.NSEW, padx=3, pady=3, ipadx=3, ipady=3)
+            textvar.grid(row=1, column=0, columnspan=5, sticky=tk.NSEW, padx=5, pady=5, ipadx=5, ipady=5)
         except KeyError:
             messagebox.showerror(
                 title="Error",
                 message="Error loading data from file. Headers in CSV file are not configured correctly. Contact Owen for assistance"
             )
-
 
     
 class App(tk.Tk):
