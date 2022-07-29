@@ -167,7 +167,7 @@ class LogWindow(tk.Toplevel):
         # add a scrollbar to the treeview
         scrollbar = ttk.Scrollbar(self, orient=tk.VERTICAL, command=tree.yview)
         tree.configure(yscroll=scrollbar.set)
-        scrollbar.grid(row=0, column=1, sticky='ns')
+        scrollbar.grid(row=0, column=1, sticky=tk.NS)
 
         # populate the treeview with data from the csv
         with open(CSV_FILE_PATH, newline='') as f:
@@ -181,8 +181,8 @@ class LogWindow(tk.Toplevel):
                 
                 tree.insert('', 0, values=(date, time, user, des, loc))
         
-        # if the tree element is selected open up a window that shows its info
-        tree.bind('<<TreeviewSelect>>', self.item_selected)
+        # if the tree element is double clicked open up a window that shows its info
+        tree.bind('<Double-1>', self.item_selected)
 
         return tree
 
