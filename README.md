@@ -38,9 +38,9 @@ With all of this information available to me I can complete my timesheet with ea
 
 ## How can this application be improved?
 
-The first thing I would improve is the way each event is saved. In this version each service event is saved to a .csv file that is saved in the `C:\Temp` folder. This is not an ideal way to store date and can become an issue in many different ways. The file could be deleted or the data can be skewed if the user includes a comma in any of the fields. I am working towards creating an updated version of this tool that uses `sqlite3` to store data instead of the current method.
+The first thing I would improve is the way each event is saved. In this version each service event is saved to a .csv file that is saved in the `C:\Temp` folder. This is not an ideal way to store data and can become an issue in many different ways. The file could be deleted or the data can be skewed if the user includes a comma in any of the fields. I am working towards creating an updated version of this tool that uses `sqlite3` to store data instead of the current method.
 
-Alongside the implementation of storing events using SQL, I aim to add a feature that allows me to edit events or delete events after they are submitted. Currently the only way to do this is to open the csv file and edit/remove directly. This is inefficent and unsafe for many reasons and can cause more problems that it would solve.
+Alongside the implementation of storing events using SQL, I aim to add a feature that allows me to edit events or delete events after they are submitted. Currently the only way to do this is to open the csv file and edit/remove directly. This is inefficent and unsafe for many reasons and can cause more problems than it would solve.
 
 Finally, I am attempting to build the next version of this application using PyQt6 instead of Tkinter. Tkinter is a dated library and PyQt6 provides many more GUI features that could be useful. Learning development with Qt would be far more beneficial for someone learning software development and engineering, and can also be translated into C++ which is the native Qt language.
 
