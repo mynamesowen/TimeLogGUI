@@ -1,0 +1,11 @@
+C:\Users\opawlak\Documents\GitHub\TimeLogGUI\TimeLog\bin\Debug\TimeLog.exe.config
+C:\Users\opawlak\Documents\GitHub\TimeLogGUI\TimeLog\bin\Debug\TimeLog.exe
+C:\Users\opawlak\Documents\GitHub\TimeLogGUI\TimeLog\bin\Debug\TimeLog.pdb
+C:\Users\opawlak\Documents\GitHub\TimeLogGUI\TimeLog\obj\Debug\TimeLog.csproj.AssemblyReference.cache
+C:\Users\opawlak\Documents\GitHub\TimeLogGUI\TimeLog\obj\Debug\TimeLog.csproj.SuggestedBindingRedirects.cache
+C:\Users\opawlak\Documents\GitHub\TimeLogGUI\TimeLog\obj\Debug\TimeLog.MainWindow.resources
+C:\Users\opawlak\Documents\GitHub\TimeLogGUI\TimeLog\obj\Debug\TimeLog.Properties.Resources.resources
+C:\Users\opawlak\Documents\GitHub\TimeLogGUI\TimeLog\obj\Debug\TimeLog.csproj.GenerateResource.cache
+C:\Users\opawlak\Documents\GitHub\TimeLogGUI\TimeLog\obj\Debug\TimeLog.csproj.CoreCompileInputs.cache
+C:\Users\opawlak\Documents\GitHub\TimeLogGUI\TimeLog\obj\Debug\TimeLog.exe
+C:\Users\opawlak\Documents\GitHub\TimeLogGUI\TimeLog\obj\Debug\TimeLog.pdb
